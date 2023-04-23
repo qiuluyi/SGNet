@@ -86,7 +86,7 @@ def train(net, optimizer, epochs, scheduler=None, weights=WEIGHTS, save_epoch=10
             del (data, target, loss)
 
         if e % save_epoch == 0:
-            # acc = test(net, test_ids, all=False, stride=min(WINDOW_SIZE))
+            # acc = test(net, valid_ids, all=False, stride=min(WINDOW_SIZE))
             
             if os.path.exists('./linknet') is False:
                 os.mkdir('./linknet')
@@ -138,7 +138,7 @@ if __name__ == "__main__":
     train_set = Sdataset(train_ids, cache=CACHE)
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=BATCH_SIZE)
 
-    valid_id = ['16', '17', '18']
+    valid_ids = ['16', '17', '18']
     valid_set = Sdataset(train_ids, cache=CACHE)
     valid_loader = torch.utils.data.DataLoader(train_set, batch_size=BATCH_SIZE)
 
