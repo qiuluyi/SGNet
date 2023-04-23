@@ -108,7 +108,7 @@ def train_method():
     vgg_url = 'https://download.pytorch.org/vgg16_bn-6c64b313.pth'
     if not os.path.isfile('pretrain/vgg16_bn-6c64b313.pth'):
         weights = URLopener().retrieve(vgg_url, 'pretrain/vgg16_bn-6c64b313.pth')
-    vgg_weights = torch.load('pretrain/vgg16_bn-6c64b313.pth')
+    vgg_weights = torch.load('pretrained/vgg16_bn-6c64b313.pth')
     mapped_weights = {}
     for k_vgg, k_segnet in zip(vgg_weights.keys(), net.state_dict().keys()):
         if "features" in k_vgg:
