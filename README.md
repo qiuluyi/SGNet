@@ -125,6 +125,7 @@ The Ottawa road dataset is used as the experiment dataset to evaluate the SGNet 
 |zstd            |   1.5.2             |     ha4553b 6_0|         |
 
 ## If you make use of the method, please cite our following paper:
+`
 @ARTICLE{10105922,
   author={Qiu, Luyi and Yu, Dayu and Zhang, Chenxiao and Zhang, Xiaofeng},
   journal={IEEE Geoscience and Remote Sensing Letters}, 
@@ -134,3 +135,4 @@ The Ottawa road dataset is used as the experiment dataset to evaluate the SGNet 
   number={},
   pages={1-1},
   doi={10.1109/LGRS.2023.3268647}}
+ `
