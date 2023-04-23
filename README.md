@@ -123,3 +123,14 @@ The Ottawa road dataset is used as the experiment dataset to evaluate the SGNet 
 |yimage          |   1.1.0             |         pypi_0|      pypi|
 |zlib            |   1.2.13            |     h5eee18b_0|          | 
 |zstd            |   1.5.2             |     ha4553b 6_0|         |
+
+## If you make use of the method, please cite our following paper:
+@ARTICLE{10105922,
+  author={Qiu, Luyi and Yu, Dayu and Zhang, Chenxiao and Zhang, Xiaofeng},
+  journal={IEEE Geoscience and Remote Sensing Letters}, 
+  title={A Semantics-Geometry Framework for Road Extraction from Remote Sensing Images}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/LGRS.2023.3268647}}
