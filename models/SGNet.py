@@ -200,7 +200,7 @@ class SDbranch(nn.Module):
         dx1 = torch.cat([dx1, cbam1], dim=1)
         dx1 = self.conv1_2_D_bn(F.leaky_relu(self.conv1_2_D(dx1)))
         dx1 = self.conv1_2_D_1_bn(F.leaky_relu(self.conv1_2_D_1(dx1)))
-        dx1 = F.log_softmax(self.conv1_1_D(dx1))
+        dx1 = self.conv1_1_D(dx1)
         return dx1
 
 class GDbranch(torch.nn.Module):
@@ -259,8 +259,7 @@ class GDbranch(torch.nn.Module):
         self.netScoreFiv = torch.nn.Conv2d(in_channels=512, out_channels=2, kernel_size=1, stride=1, padding=0)
 
         self.netCombine = torch.nn.Sequential(
-            torch.nn.Conv2d(in_channels=10, out_channels=2, kernel_size=1, stride=1, padding=0),
-            torch.nn.Sigmoid()
+            torch.nn.Conv2d(in_channels=10, out_channels=2, kernel_size=1, stride=1, padding=0)
         )
 
     def forward(self, tenInput):
